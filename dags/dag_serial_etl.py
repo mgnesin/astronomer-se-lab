@@ -4,7 +4,7 @@ from datetime import datetime
 import logging
 
 @dag(
-    dag_id="dag_serial_etl",
+    dag_id="dag_1_serial_etl",
     start_date=datetime(2026, 5, 13),
     schedule="0 6 * * *", # daily at 6AM UTC
     catchup=False,
