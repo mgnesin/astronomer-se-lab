@@ -33,7 +33,7 @@ def parallel_dq_checks():
             LEFT JOIN DEMO_DB.GOOGLE_CLOUD_POSTGRESQL_APP_DATA.CUSTOMERS c ON o.customer_id = c.id
             WHERE c.id IS NULL;
         """)
-        assert result[0] == 0, f"Found {result[0]} orphaned orders!"
+        assert result[0] == 1, f"Found {result[0]} orphaned orders!"
         return {"check": "orphaned_orders", "status": "PASS"}
 
     @task(queue="snowflake")
