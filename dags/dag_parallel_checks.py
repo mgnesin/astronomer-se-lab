@@ -66,4 +66,4 @@ def parallel_dq_checks():
 
 parallel_dq_checks()
 
-#update .
+#update ..
